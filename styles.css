@@ -941,15 +941,6 @@ h3 {
     aspect-ratio: 16 / 10;
   }
 
-  .lot-media-grid img:not(:nth-child(2)) {
-    display: none;
-  }
-
-  .lot-media-grid img:nth-child(2) {
-    grid-column: 1 / -1;
-    aspect-ratio: 16 / 10;
-  }
-
   .lot-content {
     padding: 22px 18px;
     background: var(--white);
@@ -1000,6 +991,11 @@ h3 {
   .lot-media-grid img:first-child {
     grid-row: span 2;
     aspect-ratio: auto;
+  }
+
+  .lot-media-grid img:only-child {
+    grid-row: auto;
+    aspect-ratio: 16 / 10;
   }
 
   .cabin-grid,
