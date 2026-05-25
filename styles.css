@@ -891,6 +891,80 @@ h3 {
   .hero-actions .btn {
     flex: 1 1 100%;
   }
+
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+    width: 54px;
+    min-height: 54px;
+    padding: 0;
+  }
+
+  .floating-whatsapp::before {
+    display: none;
+  }
+
+  .floating-whatsapp span {
+    font-size: 0;
+  }
+
+  .floating-whatsapp span::before {
+    content: "WA";
+    font-size: 0.86rem;
+  }
+
+  .floating-whatsapp.is-context-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+  }
+
+  .lot-card {
+    gap: 14px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .lot-media-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .lot-media-grid img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .lot-media-grid img:first-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 10;
+  }
+
+  .lot-content {
+    padding: 22px 18px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  .lot-content h3 {
+    font-size: 1.42rem;
+  }
+
+  .lot-content .btn {
+    width: 100%;
+  }
+
+  .spec-list {
+    margin-top: 18px;
+  }
+
+  .spec-list div {
+    min-height: 42px;
+    padding: 10px 11px;
+  }
 }
 
 @media (min-width: 620px) {

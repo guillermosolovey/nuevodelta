@@ -13,6 +13,8 @@ const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const whatsappLinks = document.querySelectorAll("[data-whatsapp]");
+const floatingWhatsapp = document.querySelector(".floating-whatsapp");
+const lotsSection = document.querySelector("#lotes");
 const revealItems = document.querySelectorAll(".reveal");
 const lightboxTriggers = document.querySelectorAll("[data-lightbox]");
 const lightbox = document.querySelector("[data-lightbox-modal]");
@@ -91,6 +93,21 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => revealObserver.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+if (floatingWhatsapp && lotsSection && "IntersectionObserver" in window) {
+  const mobileQuery = window.matchMedia("(max-width: 619px)");
+  const floatingObserver = new IntersectionObserver((entries) => {
+    const lotsVisible = entries.some((entry) => entry.isIntersecting);
+    floatingWhatsapp.classList.toggle("is-context-hidden", mobileQuery.matches && lotsVisible);
+  }, { threshold: 0.08 });
+
+  floatingObserver.observe(lotsSection);
+  mobileQuery.addEventListener("change", () => {
+    if (!mobileQuery.matches) {
+      floatingWhatsapp.classList.remove("is-context-hidden");
+    }
+  });
 }
 
 lightboxTriggers.forEach((trigger) => {
