@@ -1,0 +1,11 @@
+Pendientes Nuevo Delta
+======================
+
+- Esperar la propagacion/delegacion del dominio nuevodelta.com.ar desde NIC.ar hacia Cloudflare.
+- Confirmar que GitHub Pages valide el dominio nuevodelta.com.ar.
+- Activar Enforce HTTPS en GitHub Pages cuando el certificado este disponible.
+- Verificar que funcionen:
+  - https://nuevodelta.com.ar
+  - https://www.nuevodelta.com.ar
+- Configurar Cloudflare Web Analytics para trackear visitas.
+- Agregar el snippet de Cloudflare Web Analytics en index.html y hacer commit/push.
