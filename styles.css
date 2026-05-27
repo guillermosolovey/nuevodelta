@@ -681,6 +681,10 @@ h3 {
   object-fit: contain;
 }
 
+.plan-feature-wide {
+  grid-column: 1 / -1;
+}
+
 .plan-card img {
   aspect-ratio: 16 / 10;
   object-fit: contain;
