@@ -1,5 +1,4 @@
 Pendientes Nuevo Delta
 ======================
 
-- Configurar Cloudflare Web Analytics para trackear visitas.
-- Agregar el snippet de Cloudflare Web Analytics en index.html y hacer commit/push.
+Sin pendientes por ahora.
